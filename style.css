@@ -24,6 +24,18 @@ body .container .galleryname {
   border-bottom: 3px solid black;
   text-transform: uppercase;
   font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+body .container .galleryname > .burgerMobile {
+  display: none;
+}
+body .container .galleryname > .burgerMobile > div {
+  width: 35px;
+  height: 3px;
+  background: black;
+  color: red;
+  margin-top: 5px;
 }
 body .container .categories {
   grid-column: 3/4;
@@ -73,6 +85,50 @@ body .container .footer {
   grid-column: 3/7;
   grid-row: 9;
   padding: 5px;
+}
+@media only screen and (max-width: 700px) {
+  body .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+  body .container .galleryname {
+    padding-top: 15px;
+    grid-column: 1;
+    grid-row: 1;
+    justify-content: space-around;
+  }
+  body .container .galleryname > .burgerMobile {
+    display: block;
+    margin-bottom: 10px;
+  }
+  body .container .categories {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  body .container .socialNetworks {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  body .container .artPictures {
+    grid-column: 1;
+    grid-row: 4;
+    grid-template-columns: 1fr;
+  }
+  body .container .artPictures > div {
+    text-align: center;
+  }
+  body .container .artPictures > div > img {
+    width: 80%;
+  }
+  body .container .footer {
+    grid-column: 1;
+    grid-row: 5;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
